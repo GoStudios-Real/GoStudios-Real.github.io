@@ -126,6 +126,18 @@
   const year = $("#year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  /* Back to top */
+  const backToTop = $("#backToTop");
+  if (backToTop) {
+    const toggleBackToTop = () => {
+      backToTop.hidden = false;
+      backToTop.classList.toggle("show", window.scrollY > 600);
+    };
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+    toggleBackToTop();
+    backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+
   /* If the visitor lands on a filtered hash, reveal that section cleanly */
   if (window.location.hash) {
     const target = document.querySelector(window.location.hash);

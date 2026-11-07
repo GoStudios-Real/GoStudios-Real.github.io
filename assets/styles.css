@@ -680,6 +680,49 @@ section { scroll-margin-top: 86px; }
 .note-card p { color: var(--faint); font-size: 12px; }
 .note-card code { color: var(--cyan-soft); font-family: var(--mono); font-size: 10.5px; }
 
+/* ---------- AI hub ---------- */
+.ai-hub { background: linear-gradient(180deg, rgba(0, 201, 219, 0.04), transparent); }
+.ai-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ai-card {
+  display: flex; gap: 14px; padding: 20px; border-radius: var(--radius);
+  background: var(--panel); border: 1px solid var(--line); transition: transform .2s ease, border-color .2s ease;
+}
+.ai-card:hover { transform: translateY(-3px); border-color: var(--line-strong); }
+.ai-icon {
+  flex: 0 0 46px; width: 46px; height: 46px; border-radius: 12px;
+  display: grid; place-items: center; color: var(--cyan);
+  background: linear-gradient(145deg, rgba(0, 201, 219, 0.18), rgba(0, 102, 255, 0.06));
+  border: 1px solid rgba(0, 201, 219, 0.32);
+}
+.ai-icon svg { width: 22px; height: 22px; }
+.ai-card h3 { font-size: 16px; margin-bottom: 6px; }
+.ai-card p { color: var(--muted); font-size: 13.5px; line-height: 1.55; }
+.ai-card .text-link { margin-top: 10px; display: inline-block; }
+.monogram.ai svg { width: 18px; height: 18px; }
+@media (max-width: 960px) {
+  .ai-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .ai-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- back to top ---------- */
+.back-to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 120;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--line-strong); background: var(--panel-solid);
+  color: var(--cyan); font-size: 20px; font-weight: 800;
+  opacity: 0; transform: translateY(10px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: var(--cyan); color: #001117; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
 /* CTA + footer */
 .cta { padding: 70px 0; }
 .cta-inner {

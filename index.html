@@ -9,9 +9,21 @@
   <meta property="og:title" content="GoStudios Real — one studio, many worlds">
   <meta property="og:description" content="A researched guide to PlayTree, GoConsoleOS, Windows 11 Update, the games and every public GoStudios-Real project.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://gostudios-real.github.io/assets/img/playtree-home.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/goconsoleos-logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
   <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GoStudios Real",
+    "url": "https://gostudios-real.github.io/",
+    "description": "Researched catalogue of the GoStudios-Real public repositories: PlayTree, GoConsoleOS, Windows 11 Fast & Light, games, tools and AI projects.",
+    "publisher": { "@type": "Organization", "name": "GoStudios-Real", "url": "https://github.com/GoStudios-Real" }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -33,6 +45,7 @@
         <a href="#windows11">Windows 11</a>
         <a href="#games">Games</a>
         <a href="#tools">Tools</a>
+        <a href="#ai">AI</a>
         <a href="#catalogue">Catalogue</a>
         <a href="#research">Research</a>
       </nav>
@@ -70,6 +83,7 @@
             <span><b>7</b> platforms</span>
             <span><b>28</b> PlayTree systems</span>
             <span><b>12</b> Windows tweaks</span>
+            <span><b>AI</b> 4 AI surfaces</span>
           </div>
         </div>
 
@@ -495,6 +509,50 @@
       </div>
     </section>
 
+    <section class="section ai-hub" id="ai">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <p class="eyebrow">AI / intelligence layer</p>
+          <h2>AI is built into the studio, not bolted on.</h2>
+          <p class="section-sub">From a personal assistant to in-editor builders and support chat, GoStudios ships AI where it helps.</p>
+        </div>
+        <div class="ai-grid">
+          <article class="ai-card reveal">
+            <span class="ai-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l1.9 5.8L20 10l-6.1 2.2L12 18l-1.9-5.8L4 10l6.1-2.2z" fill="currentColor"/><circle cx="19" cy="5" r="1.6" fill="currentColor"/><circle cx="5" cy="19" r="1.6" fill="currentColor"/></svg></span>
+            <div>
+              <h3>GoAI assistant</h3>
+              <p>Chat, weather, images, code, research and GoStudios Cloud accounts — shipped as GoAI-Android (Android 13–16) and embedded in GoConsoleOS Android.</p>
+              <a class="text-link" href="https://github.com/GoStudios-Real/GoAI-Android" target="_blank" rel="noopener">Open GoAI ↗</a>
+            </div>
+          </article>
+          <article class="ai-card reveal">
+            <span class="ai-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H4z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 19h8M12 15v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 8h4M7 11h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            <div>
+              <h3>AI Builder / Coder</h3>
+              <p>Roblox Studio Android Edition includes an AI Builder and AI Coder alongside its 3D viewport, Lua editor and Open Cloud publishing.</p>
+              <a class="text-link" href="https://gostudios-real.github.io/Roblox-Studio-Android-Edition/" target="_blank" rel="noopener">Launch editor ↗</a>
+            </div>
+          </article>
+          <article class="ai-card reveal">
+            <span class="ai-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            <div>
+              <h3>OpenRouter support chat</h3>
+              <p>ROBLOX UBERS uses OpenRouter AI for its in-app support chat, alongside Stripe Rider/Driver/Fleet plans and real human drivers.</p>
+              <a class="text-link" href="https://gostudios-real.github.io/roblox-ubers/" target="_blank" rel="noopener">Live site ↗</a>
+            </div>
+          </article>
+          <article class="ai-card reveal">
+            <span class="ai-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 20h10M12 16v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7 8h10M7 11h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            <div>
+              <h3>GoAI on the console</h3>
+              <p>The GoConsoleOS family (desktop and Android) hosts GoAI as part of its companion app set and in-console assistant surface.</p>
+              <a class="text-link" href="https://github.com/GoStudios-Real/GoConsoleOS-Android" target="_blank" rel="noopener">Android repo ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section catalogue" id="catalogue">
       <div class="wrap">
         <div class="section-heading reveal">
@@ -512,6 +570,7 @@
             <button class="chip" data-filter="tools">Tools</button>
             <button class="chip" data-filter="mobile">Mobile</button>
             <button class="chip" data-filter="web">Web</button>
+            <button class="chip" data-filter="ai">AI</button>
           </div>
           <label class="search-box">
             <span class="sr-only">Search the catalogue</span>
@@ -545,7 +604,7 @@
             <div class="repo-links"><a href="https://github.com/GoStudios-Real/playtree-game-art" target="_blank" rel="noopener">Repo ↗</a></div>
           </article>
 
-          <article class="repo-card reveal" data-cats="console windows" data-search="goconsoleos csharp windows 11 usb console steam epic game pass acc http api">
+          <article class="repo-card reveal" data-cats="console windows ai" data-search="goconsoleos csharp windows 11 usb console steam epic game pass acc http api ai assistant">
             <div class="repo-head"><span class="monogram gc">GC</span><span class="tag tag-cyan">Platform</span></div>
             <h3>GoConsoleOS</h3>
             <p>USB-powered console shell for Windows 11 with controller-first UI, unified game library, GoStore, overlay and an ACC server on port 39210.</p>
@@ -561,7 +620,7 @@
             <div class="repo-links"><a href="https://github.com/GoStudios-Real/GoConsoleOS-Linux" target="_blank" rel="noopener">Repo ↗</a></div>
           </article>
 
-          <article class="repo-card reveal" data-cats="console mobile" data-search="goconsoleos android companion touchscreen controller portable link cast watch wear os goai">
+          <article class="repo-card reveal" data-cats="console mobile ai" data-search="goconsoleos android companion touchscreen controller portable link cast watch wear os goai ai">
             <div class="repo-head"><span class="monogram gc">GC</span><span class="tag tag-muted">Android</span></div>
             <h3>GoConsoleOS-Android</h3>
             <p>Five companion apps: USB touch controller, Mobile hub, Account Portal, GoAI and a Wear OS watch companion.</p>
@@ -617,7 +676,7 @@
             <div class="repo-links"><a href="https://gostudios-real.github.io/care-grow-an-chicken/" target="_blank" rel="noopener">Play ↗</a><a href="https://github.com/GoStudios-Real/care-grow-an-chicken" target="_blank" rel="noopener">Repo ↗</a></div>
           </article>
 
-          <article class="repo-card reveal" data-cats="games web" data-search="roblox ubers transit drivers bookings wifi openrouter stripe node">
+          <article class="repo-card reveal" data-cats="games web ai" data-search="roblox ubers transit drivers bookings wifi openrouter stripe node ai">
             <div class="repo-head"><span class="monogram ru">RU</span><span class="tag tag-lime">Game</span></div>
             <h3>roblox-ubers</h3>
             <p>In-Roblox transit with real human drivers, profile-generated maps, seat bookings, timetables, free WiFi codes, AI support and Stripe plans.</p>
@@ -625,7 +684,7 @@
             <div class="repo-links"><a href="https://gostudios-real.github.io/roblox-ubers/" target="_blank" rel="noopener">Site ↗</a><a href="https://github.com/GoStudios-Real/roblox-ubers" target="_blank" rel="noopener">Repo ↗</a></div>
           </article>
 
-          <article class="repo-card reveal" data-cats="tools web mobile" data-search="roblox studio android edition lua editor 3d viewport open cloud ai builder">
+          <article class="repo-card reveal" data-cats="tools web mobile ai" data-search="roblox studio android edition lua editor 3d viewport open cloud ai builder">
             <div class="repo-head"><span class="monogram rs">RS</span><span class="tag tag-cyan">Live</span></div>
             <h3>Roblox-Studio-Android-Edition</h3>
             <p>Roblox Studio-style editor for web, Android and desktop: 3D viewport, Lua scripting, AI Builder/Coder, toolbox and Open Cloud publishing.</p>
@@ -649,8 +708,8 @@
             <div class="repo-links"><a href="https://gostudios-real.github.io/GoStudios-Portable-USB-Stick/" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/GoStudios-Real/GoStudios-Portable-USB-Stick" target="_blank" rel="noopener">Repo ↗</a></div>
           </article>
 
-          <article class="repo-card reveal" data-cats="tools mobile" data-search="goai android assistant webview chat weather images code research cloud">
-            <div class="repo-head"><span class="monogram ai">AI</span><span class="tag tag-muted">Assistant</span></div>
+          <article class="repo-card reveal" data-cats="tools mobile ai" data-search="goai android assistant webview chat weather images code research cloud ai">
+            <div class="repo-head"><span class="monogram ai" aria-label="AI"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.9 5.8L20 10l-6.1 2.2L12 18l-1.9-5.8L4 10l6.1-2.2z" fill="currentColor"/><circle cx="19" cy="5" r="1.6" fill="currentColor"/><circle cx="5" cy="19" r="1.6" fill="currentColor"/></svg></span><span class="tag tag-muted">Assistant</span></div>
             <h3>GoAI-Android</h3>
             <p>The GoAI assistant as an Android 13–16 WebView app: chat, weather, images, code, research, games, cities and GoStudios Cloud.</p>
             <div class="repo-tags"><span>JavaScript</span><span>WebView</span><span>Android</span></div>
@@ -791,6 +850,7 @@
     </div>
   </footer>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>↑</button>
   <script src="assets/app.js"></script>
 </body>
 </html>
