@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gostudios-real.github.io/sitemap.xml
