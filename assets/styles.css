@@ -680,3 +680,39 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
 }
+
+/* ---------- theme toggle ---------- */
+.theme-toggle {
+  width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line-strong);
+  background: rgba(255,255,255,.03); color: var(--text); font-size: 18px; font-weight: 800;
+}
+.theme-toggle:hover { border-color: var(--cyan); color: var(--cyan); }
+.sort-box select {
+  padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line-strong);
+  background: rgba(255,255,255,.03); color: var(--text); font-size: 13px;
+}
+.sort-box select:focus { outline: 2px solid var(--cyan); }
+html[data-theme="light"] {
+  --bg: #f4f8fc; --bg-2: #eaf1f8; --panel: rgba(255,255,255,.88); --panel-solid: #ffffff;
+  --panel-2: #f0f5fb; --line: rgba(30,60,100,.14); --line-strong: rgba(30,60,100,.26);
+  --text: #0b1a2b; --muted: #3a5575; --faint: #5a7a9a; --cyan: #008fa0;
+  --cyan-soft: #006b7a; --blue: #0055cc; --lime: #4a9a10; --lime-soft: #3a7a08;
+  --gold: #b08a00; --red: #d03040;
+}
+html[data-theme="light"] body { background: var(--bg); color: var(--text); }
+html[data-theme="light"] .site-header { background: rgba(244,248,252,.7); }
+html[data-theme="light"] .site-header.scrolled { background: rgba(244,248,252,.92); }
+html[data-theme="light"] .site-footer { background: #eaf1f8; }
+html[data-theme="light"] .back-to-top { background: var(--panel-solid); }
+
+/* ---------- back to top ---------- */
+.back-to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 120;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--line-strong); background: var(--panel-solid);
+  color: var(--cyan); font-size: 20px; font-weight: 800;
+  opacity: 0; transform: translateY(10px); pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+}
+.back-to-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { background: var(--cyan); color: #001117; }

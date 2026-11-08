@@ -54,6 +54,7 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.5v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.5A11.3 11.3 0 0 0 12 .7Z"/></svg>
           <span>GitHub</span>
         </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">◐</button>
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -576,6 +577,14 @@
             <span class="sr-only">Search the catalogue</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
             <input id="catalogueSearch" type="search" placeholder="Search repos, tech or keywords…" autocomplete="off">
+          </label>
+          <label class="sort-box">
+            <span class="sr-only">Sort catalogue</span>
+            <select id="catalogueSort" aria-label="Sort catalogue">
+              <option value="default">Default order</option>
+              <option value="name">Name A-Z</option>
+              <option value="category">Category</option>
+            </select>
           </label>
         </div>
 

@@ -65,15 +65,51 @@
     revealItems.forEach((item) => item.classList.add("visible"));
   }
 
+  /* Theme toggle */
+  const themeToggle = $("#themeToggle");
+  if (themeToggle) {
+    const saved = localStorage.getItem("gs-theme");
+    if (saved) document.documentElement.setAttribute("data-theme", saved);
+    const syncIcon = () => {
+      themeToggle.textContent = document.documentElement.getAttribute("data-theme") === "light" ? "☾" : "◐";
+    };
+    syncIcon();
+    themeToggle.addEventListener("click", () => {
+      const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+      if (next === "dark") document.documentElement.removeAttribute("data-theme");
+      else document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("gs-theme", next);
+      syncIcon();
+    });
+  }
+
   /* Catalogue filter + search */
   const grid = $("#catalogueGrid");
   const cards = grid ? $$(".repo-card", grid) : [];
   const chips = $$(".chip");
   const searchInput = $("#catalogueSearch");
+  const sortSelect = $("#catalogueSort");
   const emptyState = $("#emptyState");
   let activeFilter = "all";
 
+  const sortCards = () => {
+    if (!grid || !sortSelect) return;
+    const mode = sortSelect.value;
+    const ordered = cards.slice();
+    if (mode === "name") {
+      ordered.sort((a, b) => {
+        const an = (a.querySelector("h3") || {}).textContent || "";
+        const bn = (b.querySelector("h3") || {}).textContent || "";
+        return an.localeCompare(bn);
+      });
+    } else if (mode === "category") {
+      ordered.sort((a, b) => (a.dataset.cats || "").localeCompare(b.dataset.cats || ""));
+    }
+    ordered.forEach((card) => grid.appendChild(card));
+  };
+
   const applyCatalogue = () => {
+    sortCards();
     const query = (searchInput ? searchInput.value : "").trim().toLowerCase();
     let visible = 0;
     cards.forEach((card) => {
@@ -100,6 +136,9 @@
   if (searchInput) {
     searchInput.addEventListener("input", applyCatalogue);
     searchInput.addEventListener("search", applyCatalogue);
+  }
+  if (sortSelect) {
+    sortSelect.addEventListener("change", applyCatalogue);
   }
 
   /* Copy buttons */
